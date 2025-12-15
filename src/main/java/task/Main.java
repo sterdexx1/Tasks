@@ -2,13 +2,15 @@ package task;
 
 public class Main {
     public static void main(String[] args) {
-        MyStringBuilder myStringBuilder = new MyStringBuilder();
-        StringBuilder stringBuilder = new StringBuilder("ddd");
-        myStringBuilder.setStringBuilder(stringBuilder);
+        StringBuilder stringBuilder = new StringBuilder();
+        MyStringBuilder myStringBuilder = new MyStringBuilder(stringBuilder);
+        stringBuilder.append("a");
+        stringBuilder.append("b");
         Memory memory = myStringBuilder.createMemory();
-        myStringBuilder.setStringBuilder(new StringBuilder("aaa"));
-        myStringBuilder.setStringBuilder(new StringBuilder("qqq"));
-        myStringBuilder.undo(memory);
-        System.out.println(myStringBuilder);
+        stringBuilder.append("c");
+        MyStringBuilder myStringBuilder1 = myStringBuilder.undo(memory);
+        System.out.println("StringBuilder: " + stringBuilder);
+        System.out.println("MyStringBuilder: " + myStringBuilder1);
+        System.out.println("Memory: " + memory.getStringBuilder());
     }
 }
