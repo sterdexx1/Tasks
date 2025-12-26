@@ -21,4 +21,5 @@ class MyStringBuilderTest {
         assertEquals("ab",memory.getStringBuilder().toString());
     }
 
+
 }

@@ -12,5 +12,6 @@ public class Main {
         System.out.println("StringBuilder: " + stringBuilder);
         System.out.println("MyStringBuilder: " + myStringBuilder1);
         System.out.println("Memory: " + memory.getStringBuilder());
+
     }
 }
